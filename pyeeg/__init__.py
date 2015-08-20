@@ -4,7 +4,7 @@
    Copyleft 2010 Xin Liu
    Copyleft 2014-2015 Borzou Alipour Fard
 
-PyEEG, a Python module to extract EEG features, v 0.03
+PyEEG, a Python module to extract EEG feature.
 
 Project homepage: http://pyeeg.org
 
@@ -699,7 +699,7 @@ def samp_entropy(X, M, R):
             # if max(abs(Em[i]-Em[j])) <= R:  # v 0.01_b_r1
             if in_range(Em[i], Em[j], R):
                 Cm[i] += 1
-#            if max(abs(Emp[i] - Emp[j])) <= R: # v 0.01_b_r1
+                # if max(abs(Emp[i] - Emp[j])) <= R: # v 0.01_b_r1
                 if abs(Emp[i][-1] - Emp[j][-1]) <= R:  # check last one
                     Cmp[i] += 1
 
@@ -713,7 +713,7 @@ def dfa(X, Ave=None, L=None):
     boxes L.
 
     The first step to compute DFA is to integrate the signal. Let original
-    seres be X= [x(1), x(2), ..., x(N)].
+    series be X= [x(1), x(2), ..., x(N)].
 
     The integrated signal Y = [y(1), y(2), ..., y(N)] is obtained as follows
     y(k) = \sum_{i=1}^{k}{x(i)-Ave} where Ave is the mean of X.
